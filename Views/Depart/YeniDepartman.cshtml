@@ -1,0 +1,21 @@
+﻿@model proje.Models.departmanlar
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "YeniDepartman";
+    Layout = "~/Views/Depart/Index.cshtml";
+}
+
+<h2>Yeni Departman Ekle</h2>
+
+<form class="form-group" method="post">
+    @Html.LabelFor(x => x.DepartmanAd)
+    @Html.TextBoxFor(x => x.DepartmanAd, new { @class = "form-control" })
+    @Html.LabelFor(x => x.Detay)
+    @Html.TextBoxFor(x => x.Detay, new { @class = "form-control" })
+
+    <br />
+    <button class="btn btn-info">Ekle</button>
+
+</form>
